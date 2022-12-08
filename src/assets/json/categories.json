@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Comédia",
+        "img": "https://i0.wp.com/www.usmagazine.com/wp-content/uploads/2021/09/The-Hangover-Cast-Where-Are-They-Now-Feature.jpg?crop=0px%2C258px%2C1350px%2C709px&resize=1200%2C630&ssl=1&quality=55&strip=all"
+    },
+    {
+        "name": "Ação",
+        "img": "https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/240/imagem-destaque-ordem-cronologica-e-onde-assistir-filmes-007.jpg"
+    },
+    {
+        "name": "Terror",
+        "img": "https://trilhadomedo.com/wp-content/uploads/2019/06/annabelle-3-cena.jpg"
+    },
+    {
+        "name": "Romance",
+        "img": "https://rollingstone.uol.com.br/media/uploads/orgulho-e-preconceito-cena-fina-reproducao.jpg"
+    },
+    {
+        "name": "Infantil",
+        "img": "https://animarestudio.com.br/wp-content/uploads/2018/12/historia-da-galinha-pintadinha-no-animarestudio.jpg"
+    },
+    {
+        "name": "Clássicos",
+        "img": "https://institutodecinema.com.br/img/9-felicidade-Chaplin.jpg"
+    },
+    {
+        "name": "Ficção Científica",
+        "img": "https://images.adsttc.com/media/images/61c3/a4bc/3e4b/3144/9900/0006/large_jpg/coolhuntermx-metaverso-ready-player-pne-bjb.jpg?1640211638"
+    }
+]

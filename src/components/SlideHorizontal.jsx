@@ -5,6 +5,7 @@ import gsap from "gsap";
 import './SlideHorizontal.css';
 
 export default function SlideHorizontal (props) {
+    const {data, height, label} = props;
 
     let scrl = useRef(null);
     const [scrollX, setscrollX] = useState(0);
@@ -28,10 +29,10 @@ export default function SlideHorizontal (props) {
     //Anim
     const anim = (e) => {
       gsap.from(e.target, { scale: 1 });
-      gsap.to(e.target, { scale: 1.5 });
+      gsap.to(e.target, { scale: 1.09 });
     };
     const anim2 = (e) => {
-      gsap.from(e.target, { scale: 1.5 });
+      gsap.from(e.target, { scale: 1.09 });
       gsap.to(e.target, { scale: 1 });
     };
   
@@ -48,28 +49,37 @@ export default function SlideHorizontal (props) {
     };
 
     return (
-        <Box>
-            <Box className="carousel" ref={scrl} onScroll={scrollCheck}>
-                <Button variant="contained" className="fw-bolder mx-1 position-fixed start-0 z-index"
-                    onClick={() => slide(-80)}
-                    onMouseEnter={(e) => anim(e)}
-                    onMouseLeave={(e) => anim2(e)}>
-                    Back
+        <Box className="">
+            <Box className="d-flex flex-column justify-content-center border-box">
+            <Box className="d-flex flex-row position-relative overflow-scroll gap" ref={scrl} onScroll={scrollCheck}>
+                  {data.map((e,i)=> 
+                      <Box className="element-movie d-flex flex-row justify-content-center rounded" key={i}
+                          style={{
+                            backgroundImage: `url(${e.img})`,
+                            height: `${height}px`
+                          }}>  
+                          <h6 className={`fw-bolder align-self-center  mx-1 text-truncate z-index ${label}`}>
+                              {e.name}
+                          </h6>                                 
+                      </Box>
+                  )}
+                </Box>
+              {scrollX !== 0 && ( 
+              <Button variant="contained" className="fw-bolder mx-1 position-absolute start-0 buttom-prev buttom"
+                      onClick={() => slide(-100)}
+                      onMouseEnter={(e) => anim(e)}
+                      onMouseLeave={(e) => anim2(e)}>
+                      <i class="bi bi-chevron-compact-left fs-2"></i>
                 </Button>
-                {Object.values(props).map((e,i)=> 
-                    <Box className="element-movie rounded" key={i}
-                        style={{backgroundImage: `url(${e.img})`}}>  
-                        <h6 className="fw-bolder position-absolute bottom-0 mx-1 text-truncate">
-                            {e.name}
-                        </h6>                                 
-                    </Box>
+                 )}
+                {!scrolEnd && (
+                  <Button variant="contained" className="fw-bolder mx-1 position-absolute end-0 buttom-next buttom" 
+                      onClick={() => slide(+100)}
+                      onMouseEnter={(e) => anim(e)}
+                      onMouseLeave={(e) => anim2(e)}>
+                      <i class="bi bi-chevron-compact-right fs-2"></i>
+                </Button>
                 )}
-                <Button variant="contained" className="fw-bolder mx-1 position-fixed end-0 z-index" 
-                    onClick={() => slide(+80)}
-                    onMouseEnter={(e) => anim(e)}
-                    onMouseLeave={(e) => anim2(e)}>
-                    Next
-                </Button>
             </Box>
         </Box>
 
