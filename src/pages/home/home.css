@@ -1,0 +1,128 @@
+.main-movie {
+    width: 100%;
+    height: 30rem;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-movie:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, .6);
+    filter: brightness(30%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+  .main-movie:hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30rem;
+    filter: brightness(60%);
+}
+
+.title-main {
+    z-index: 10;
+    position: absolute;
+}
+
+.button-main {
+    background-color: var(--primary) !important;
+}
+
+.button-secondary {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.element-movie {
+    flex-shrink: 0;
+    width: 250px !important;
+    height: 200px !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.element-movie::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px !important;
+    height: 200px !important;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.element-movie:hover {
+    transform: scale(1.09);
+    filter: drop-shadow(5px 3px 2px #585858);
+}
+
+.element-movie:before {
+    filter: brightness(20%);
+}
+
+.element-movie:hover::before {
+    background-color: rgba(0, 0, 0, .0);
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 20px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/**Margins**/
+.margin-5 {
+    margin: 5%;
+}
+
+.margin-10 {
+    margin: 10%;
+}
+
+.margin-15 {
+    margin: 15%;
+}
+
+.margin-top-2 {
+    margin-top: 2%;
+}
+
+.margin-top-5 {
+    margin-top: 5%;
+}
+
+.margin-top-10 {
+    margin-top: 10%;
+}
+
+.margin-top-15 {
+    margin-top: 15%;
+}
