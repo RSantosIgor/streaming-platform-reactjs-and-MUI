@@ -50,9 +50,7 @@ export default function Home () {
                         </Box>
                     </Box>
                     <Box className="row mt-1">
-                        <a href="/details" className='text-decoration-none'>
-                            <SlideHorizontal {...{data: movies, height: 200, label: "fs-4 text"}}/>
-                        </a>
+                        <SlideHorizontal {...{data: movies, height: 200, label: "fs-4 text"}}/>
                     </Box>
                 </Box>
                 <Box className="row ms-2">

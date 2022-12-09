@@ -3,6 +3,7 @@ import Button from '@mui/material/button';
 import { useState, useRef } from "react";
 import gsap from "gsap";
 import './SlideHorizontal.css';
+import { Link } from 'react-router-dom';
 
 export default function SlideHorizontal (props) {
     const {data, height, label} = props;
@@ -49,23 +50,26 @@ export default function SlideHorizontal (props) {
     };
 
     return (
-        <Box className="">
+        <Box>
             <Box className="d-flex flex-column justify-content-center border-box">
             <Box className="d-flex flex-row position-relative overflow-scroll gap" ref={scrl} onScroll={scrollCheck}>
                   {data.map((e,i)=> 
+                    <Link to="/details" className='text-decoration-none'>
                       <Box className="element-movie d-flex flex-row justify-content-center rounded" key={i}
                           style={{
                             backgroundImage: `url(${e.img})`,
                             height: `${height}px`
-                          }}>  
+                          }}
+                          >  
                           <h6 className={`fw-bolder align-self-center  mx-1 text-truncate z-index ${label}`}>
                               {e.name}
                           </h6>                                 
                       </Box>
+                    </Link>
                   )}
                 </Box>
               {scrollX !== 0 && ( 
-              <Button variant="contained" className="fw-bolder mx-1 position-absolute start-0 buttom-prev buttom"
+              <Button variant="contained" className="fw-bolder mx-1 position-absolute start-0 buttom-prev buttom z-index"
                       onClick={() => slide(-100)}
                       onMouseEnter={(e) => anim(e)}
                       onMouseLeave={(e) => anim2(e)}>
@@ -73,7 +77,7 @@ export default function SlideHorizontal (props) {
                 </Button>
                  )}
                 {!scrolEnd && (
-                  <Button variant="contained" className="fw-bolder mx-1 position-absolute end-0 buttom-next buttom" 
+                  <Button variant="contained" className="fw-bolder mx-1 position-absolute end-0 buttom-next buttom z-index" 
                       onClick={() => slide(+100)}
                       onMouseEnter={(e) => anim(e)}
                       onMouseLeave={(e) => anim2(e)}>

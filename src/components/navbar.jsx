@@ -72,6 +72,7 @@ function NavBar(props) {
                   color: '#50F127',
                   textDecoration: 'none',
                 }}
+                className="hover-primary"
               >
                 BRFLIX
               </Typography>
@@ -105,18 +106,25 @@ function NavBar(props) {
                     display: { xs: 'block', md: 'none' },
                   }}
                 >
-                  {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
+                    <MenuItem key={'Inicio'} href="/" onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">Inicio</Typography>
                     </MenuItem>
-                  ))}
+
+                    <MenuItem key={'Lancamentos'} onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">Lançamentos</Typography>
+                    </MenuItem>
+
+                    <MenuItem key={'Favoritos'} onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">Favoritos</Typography>
+                    </MenuItem>
+
                 </Menu>
               </Box>
               <Typography
                 variant="h5"
                 noWrap
                 component="a"
-                href=""
+                href="/"
                 sx={{
                   mr: 2,
                   display: { xs: 'flex', md: 'none' },
@@ -127,19 +135,39 @@ function NavBar(props) {
                   color: '#50F127',
                   textDecoration: 'none',
                 }}
+                className="hover-primary"
               >
                 BRFLIX
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {pages.map((page) => (
-                  <Button
-                    key={page}
+              <Button
+                    key={'Inicio'}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
+                    href="/"
+                    className="hover-primary"
                   >
-                    {page}
+                    Inicio
                   </Button>
-                ))}
+
+                  <Button
+                    key={'Lancamentos'}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    href="#"
+                    className="hover-primary"
+                  >
+                    Lançamentos
+                  </Button>
+                  <Button
+                    key={'Favoritos'}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    href="#"
+                    className="hover-primary"
+                  >
+                    Favoritos
+                  </Button>
               </Box>
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Abrir configurações">
