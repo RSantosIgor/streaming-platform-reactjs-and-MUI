@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import './navbar.css'
+import { Link } from 'react-router-dom';
 
 const pages = ['Inicio', 'Lançamentos', 'Favoritos'];
 const settings = ['Conta', 'Idioma', 'Sair'];
@@ -167,7 +168,9 @@ function NavBar(props) {
                 >
                   {settings.map((setting) => (
                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting}</Typography>
+                      {setting === 'Conta'
+                      ?<Link to='/account'><Typography textAlign="center">{setting}</Typography></Link>
+                      :<Typography textAlign="center">{setting}</Typography>}
                     </MenuItem>
                   ))}
                 </Menu>

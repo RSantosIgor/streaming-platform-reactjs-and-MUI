@@ -1,0 +1,55 @@
+.title-h1-details {
+    font-size: calc(3px + 1.5vmin);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 2%;
+}
+
+.body-plan-datails {
+    margin-left: 1%;
+    max-width: 98%;
+    border-bottom: 2px solid #50f127;
+    border-top: 2px solid #50f127;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.view-plan-details {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.title-plan-datails {
+    font-size: calc(0.7px + 1.5vmin);
+}
+
+.subtitle-plan-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-info-plan-details{
+    width: calc(6px + 1.5vmin);
+    height: calc(6px + 1.5vmin);
+    margin-right: 1.5%;
+}
+
+.link-plan-details {
+    font-size: calc(0.7px + 1.5vmin);
+    color: #50f127ab;
+    margin-left: 1%;
+}
+
+.img-edit-plan-details {
+    width: calc(2px + 1.5vmin);
+    height: calc(2px + 1.5vmin);
+}

@@ -10,6 +10,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Footer from "./components/Footer";
 import Home from "./pages/home/home";
 import Details from "./pages/details/Details";
+import Account from './pages/account/index';
 
 const theme = createTheme({
   palette: {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/details",
     element: <Details/>,
+  },
+  {
+    path: "/account",
+    element: <Account />
   }
 ]);
 

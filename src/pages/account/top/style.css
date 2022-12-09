@@ -1,0 +1,60 @@
+
+.top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12%;
+    height: 30%;
+    max-width: 80%;
+    margin-bottom: 2%;
+  }
+  
+  .account-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+  }
+  
+  .title,.sub-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    width: 100%;
+    height: auto;
+  }
+  
+  .sub-title {
+    display: flex;
+    font-size: calc(1px + 1.5vmin);
+    width: 100%;
+    color: #50f127;
+  }
+  
+  .logo-filme {
+    margin-right: 2%;
+  }
+  
+  .img-setting {
+    width: calc(15px + 1.5vmin);
+    height: calc(15px + 1.5vmin);
+  }
+
+@media only screen and (max-width: 600px) {
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;    
+      justify-content: center;
+    }
+    .sub-title {
+      margin-top: -2%;
+    }
+    .account-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -25%;
+    }
+  }
