@@ -142,9 +142,12 @@ function NavBar(props) {
               </Box>
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Abrir configurações">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Button onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Avatar alt="Usuario" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkLRdCp3bUaqAhT7-otWvM-znHZJx4qckvcGx7WGIgHbGXMYHPNdEEpMvttQwt--dvOyI&usqp=CAU" />
-                  </IconButton>
+                    <span className="px-2">
+                      Igor R...
+                    </span>
+                  </Button>
                 </Tooltip>
                 <Menu
                   sx={{ mt: '45px' }}
@@ -168,9 +171,6 @@ function NavBar(props) {
                     </MenuItem>
                   ))}
                 </Menu>
-                <span className="px-2">
-                    Igor R...
-                </span>
               </Box>
             </Toolbar>
           </Container>

@@ -10,7 +10,7 @@ export default function Footer() {
           <span className="mb-3 mb-md-0"><span className="green">BRFLIX</span> 2022 Company, Inc</span>
         </div>
     
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex d-flex-row">
+        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex d-flex-row">
           <li className="ms-3"><a className="text-muted" href="#"><i className="bi bi-apple"></i></a></li>
           <li className="ms-3"><a className="text-muted" href="#"><i className="bi bi-windows"></i></a></li>
           <li className="ms-3"><a className="text-muted" href="#"><i className="bi bi-google-play"></i></a></li>

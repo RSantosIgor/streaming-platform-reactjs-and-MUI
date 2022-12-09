@@ -25,3 +25,11 @@ body {
   color: 'white';
   background-color: #212121;
 }
+
+.MuiTab-textColorPrimary {
+  color: #fff !important;
+}
+
+.Mui-selected {
+  color: #50F127 !important;
+}
