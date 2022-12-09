@@ -1,4 +1,4 @@
-p{
+p {
    z-index: 10;
 }
 
@@ -51,3 +51,10 @@ p{
     background-color: var(--secondary) !important;
     color: var(--primary) !important;
 }
+
+.first-word-uppercase-p::first-letter {
+    font-size: 40px;
+    color: var(--primary);
+    font-weight: bold;
+    line-height: .75;
+  }

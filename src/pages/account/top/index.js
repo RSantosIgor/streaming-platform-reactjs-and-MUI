@@ -9,8 +9,8 @@ export default function Top() {
     return <>
         <div className='top'>
             <div className='account-logo'>
-                <img src={Setting} className='img-setting' />
-                <p className='title'>  Conta </p>
+                <img src={Setting} className='img-setting mx-2' />
+                <p className='title'>Conta </p>
             </div>
             <div>
                 <p className='sub-title'>

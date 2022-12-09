@@ -7,10 +7,12 @@ import PlanDetails from "./plan-details";
 import Security from "./security";
 import Profile from "./profile";
 import Settings from "./settings";
+import NavBar from "../../components/navbar";
 
 export default function Account() {
 
     return <>
+        <NavBar/>
         <div className="container-account">
             <div className='main'>
                 <header className="App-header">

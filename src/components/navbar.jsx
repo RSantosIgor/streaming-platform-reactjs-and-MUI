@@ -168,9 +168,11 @@ function NavBar(props) {
                 >
                   {settings.map((setting) => (
                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      {setting === 'Conta'
-                      ?<Link to='/account'><Typography textAlign="center">{setting}</Typography></Link>
-                      :<Typography textAlign="center">{setting}</Typography>}
+                        <Link 
+                          to={setting === 'Conta' ? `/account`: '#'}
+                          className="text-decoration-none text-light">
+                          {setting}
+                        </Link>
                     </MenuItem>
                   ))}
                 </Menu>
